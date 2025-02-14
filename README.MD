@@ -84,7 +84,7 @@ This project is structured in 5 stages:
 
 ---
 
-### 4. **Almacenamiento en PostgreSQL**
+### 4. **Storage in PostgreSQL**
    - **Description**: Structured and efficient data storage.
    - **Structure of the database**:
      - **Main table**: `review_analysis_`
@@ -109,7 +109,7 @@ This project is structured in 5 stages:
      - Positive
      - Negative
      - Neutral
-   - **Herramientas**: `PyTorch`, `NLTK`, `Scikit-Learn`.
+   - **Tools**: `PyTorch`, `NLTK`, `Scikit-Learn`.
 
 ### Architecture Diagram Model Building 
 ![Architecture Diagram](architecture_model.png)  
@@ -123,39 +123,39 @@ Using Neural Networks, instead of transformers, to avoid the use of GPUS in the 
 ## Project structure Model Building
 ```
 |-- .github/
-|    |-- action.yml              # GitHub Actions CI/CD
+|    |-- action.yml              # GitHub Actions CI/CD.
 |
 |-- src/
-|   |-- runner.py                # Orchestrate the whole project
+|   |-- runner.py                # Orchestrate the whole project.
 |   |
 |   |-- config/
 |   |   |-- __init__.py          # Init config.
-|   |   |-- .env                 # Enviroments varaibles
-|   |   |-- csv_to.py            # Extract data cleaned load into Database
-|   |   |-- csv.py               # Pydantic Functions
-|   |   |-- db.py                # Pydantic Functions
-|   |   |-- logger.py            # Pydantic Functions
-|   |   |-- model.py             # Pydantic Functions
+|   |   |-- .env                 # Enviroments varaibles.
+|   |   |-- csv_to.py            # Extract data cleaned load into Database.
+|   |   |-- csv.py               # Pydantic Functions.
+|   |   |-- db.py                # Pydantic Functions.
+|   |   |-- logger.py            # Pydantic Functions.
+|   |   |-- model.py             # Pydantic Functions.
 |   |  
 |   |-- db/
-|   |   |-- db_model.py          # Characteristics of database
+|   |   |-- db_model.py          # Characteristics of database.
 |   |
 |   |-- model/
 |   |   |-- models/
 |   |   
 |   |   |-- pipeline/
-|   |   |-- Book1.csv                   # Web scraping Data
-|   |   |-- clean.py                    # Data cleanup with Pandas and Regex
-|   |   |-- collection.py               # Collect data from database
-|   |   |-- model_2.py                  # Using torch.jit way
-|   |   |-- model.py                    # Using torch.save
-|   |   |-- preproccessing_text.py      # Apply NLTK techniques to data from database
+|   |   |-- Book1.csv                   # Web scraping Data.
+|   |   |-- clean.py                    # Data cleanup with Pandas and Regex.
+|   |   |-- collection.py               # Collect data from database.
+|   |   |-- model_2.py                  # Using torch.jit way.
+|   |   |-- model.py                    # Using torch.save.
+|   |   |-- preproccessing_text.py      # Apply NLTK techniques to data from database.
 |   |   |-- model_service.py            # This module provides functionality for managing a ML model.
 |   |
 |   |-- logs/
-|   |   |-- app.logs                    # Logs File
+|   |   |-- app.logs                    # Logs File.
 |
-|-- Makefile                # Archivo para automatización
+|-- Makefile                # Archive for automation.
 |-- poetry.lock             # Lockfile Poetry.
 |-- pyproject.toml          # Project dependencies
 |-- README.md               # Project documentation.
@@ -194,7 +194,7 @@ Using Neural Networks, instead of transformers, to avoid the use of GPUS in the 
 |   |   |-- model_inference.py   # Model inference
 |
 |-- Dockerfile              # File to contain the application.
-|-- Makefile                # Archive for automation
+|-- Makefile                # Archive for automation.
 |-- poetry.lock             # Lockfile Poetry.
 |-- pyproject.toml          # Project dependencies.
 |-- README.md               # Project documentation.
@@ -233,7 +233,7 @@ Giving use to the created docker image, making deploy of this in google cloud.
   ![Respuesta API](sentiments_responses.png)  
   _Description:_ Example of the returned JSON showing the sentiment ranking and corresponding score.
 
-## Conclusion y Future Improvements
+## Conclusion and Future Improvements
 - **Conclusion:**  
   In summary this project represents a significant advancement integration of Data Science and MLOps, providing end-to-end Sentiment Analysis Reviews solution. The implemented architecture guarantees efficient and scalable workflow, encompassing data acquisition and processing to automated cloud deployment.  The use of automated pipelines for model building and inference, combined with a robust CI/CD strategy, underscores our commitment to quality, agility, and innovation. This approach not only solves today's problems but also gets us ready for future improvements and adaptations in high-demand environments, positioning the project as a benchmark in the field of industrial artificial intelligence.
 - **Future Improvements:**  
